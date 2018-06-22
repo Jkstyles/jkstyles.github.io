@@ -4,6 +4,7 @@
 </html>
 
 <head>
+    <script src="toggle.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 </head>
@@ -11,42 +12,50 @@
 <body>
     <h1>
         jkstyles.github.io
-
     </h1>
 
     <mid>
-
         <img src="pic/southwest.jpg">
-
     </mid>
     <nav class="grid">
-        <a href="#">WHO AM I?</a>
-        <a href="#">WHAT AM I DOING?</a>
-        <a href="#">WHAT HAVE I DONE?</a>
+        <a onclick="show('first')">WHO AM I?</a>
+        <a onclick="show('second')">WHAT AM I DOING?</a>
+        <a onclick="show('third')">WHAT HAVE I DONE?</a>
     </nav>
-<first class="hideone">
-    <h2> <BOLD>WHO AM I?</BOLD></h2>
+    <div id="first" class="hidden">
+        <h2>WHO AM I?</h2>
 
-    <p>
+        <p>
         A musician in the local Burlington music scene and certified master gardener. I'm looking forward to my new endeavor as a
         web developer and learning at BCA.
-    </p>
-</first>
-<second class="hidetwo">
-    <h2><bold>WHAT AM I DOING?</bold></h2>
+        </p>
+        
+    </div>
+    <div id="second" class="hidden">
+        <h2>WHAT AM I DOING?</h2>
 
-    <p/>
-        I'm currently a student at the Burlington Code Academy with an interest in javascript and back end development.
-    </p>
-</second>
-<third class="hidethree">
-    <h2>
-        <bold>WHAT HAVE I DONE?</bold>
-    </h2>
-    <p>
+            <p>
+                I'm currently a student at the Burlington Code Academy with an interest in javascript and back end development.
+            </p>
+    </div>
+    <div id="third" class="hidden">
+        <h2>
+        WHAT HAVE I DONE?
+        </h2>
+        <p>
         Projects coming soon!
-    </p>
-</third>
+        </p>
+    </div>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
