@@ -1,14 +1,12 @@
-function show(id) {
-    document.getElementById('first').classList.add('hidden')
-    document.getElementById('second').classList.add('hidden')
-    document.getElementById('third').classList.add('hidden')
+var i = 0;
+var txt = 'Greenup Vermont Dashboard \n Written with HTML, CSS and javascript, we were tasked with finding a solution that would allow organizers of Greenup Day easy access to Greenup Vermont\'s collected app data.';
+var speed = 30;
 
-    var divToShow = document.getElementById(id);
-    divToShow.classList.remove("hidden");
-
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("typeWriter").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
 }
-
-// function hide() {
-//     var element = document.getElementById("first");
-//     element.classList.add("one");
-// }
+typeWriter()
