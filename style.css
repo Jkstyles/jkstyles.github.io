@@ -3,33 +3,59 @@ body{
 
 }
 
+@keyframes slideInFromRight {
+    0%{
+        transform: translateX(75%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+/* @keyframes slideFromTop{
+    0%{
+        transform: translateY(100%)
+    }
+    100%{
+        transform: translateY(0)
+    }
+} */
 
 
 #header{
     grid-template-rows:2fr 1fr;
     grid-template-rows:1fr 1fr 1fr;
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
     padding-right:70px;
     font-family: 'Shadows Into Light', cursive;
     font-size: 30px;
     text-align:right;
-    grid-column-start: 1;
-    grid-column-end: 4;
+  
     color:white;
     background-color:black;
 }
 #nav{
    grid-row-start: 2 ;
     grid-row-end:3;
+    animation: 1s ease-out 0s 1 slideInFromRight;
     
 }
 
 #wrapper{
+    height:100%;
     display: grid;
-    grid-template-rows: 6fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
     grid-template-columns: 1fr 3fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+
 }
 
 #leftSidebar{
+    animation: 1s ease-out 0s 1 slideInFromTop;
+
     color:#ffd000;
     background-color:  #410268;
     display:grid;
@@ -47,18 +73,30 @@ body{
     background-color:  #410268;
 
     display:grid;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
     grid-column-start:2; 
     grid-column-end: 3;
+}
+.greenupAppPic{
+    position:absolute;
+    z-index: 0;
+}
+.lostInVermontPic{
+    position:absolute;
+    z-index: 1;    
+}
+.pomodoroPic{
+    position:absolute;
+    z-index: 2;
 }
 img{
     padding: 5em;
 }
 #rightSidebar{
     background-color:  #410268;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
     grid-column-start:3;
     grid-column-end:4;
 
@@ -68,8 +106,8 @@ img{
     color: white;
     background-color: black;
     display: grid;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 4;
    
