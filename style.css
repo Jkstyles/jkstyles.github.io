@@ -1,3 +1,9 @@
+
+*{  
+    margin: 0;  
+    padding: 0 auto;  
+} 
+
 @keyframes slideInFromRight {
     0% {
         transform: translateX(75%);
@@ -8,12 +14,17 @@
 }
 
 #wrapper {
+    height:100%;
+    position: absolute;
+    z-index: 1;
     display: grid;
     grid-template-rows: 1fr 6fr 1fr;
     grid-template-columns: 1fr 3fr 1fr;
 }
 
 #header {
+    position: relative;
+    z-index: 0;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -26,15 +37,32 @@
     background-color: black;
 }
 
+.menuDrop li a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+input:checked ~ #typeWriter{
+    color:green;
+}
+
+input {
+    opacity: 1;
+}
+#projects {
+    padding-right: 2em;
+}
+
+#contacts {
+    padding-right: 2em;
+}
+
 #nav {
-   
     overflow: hidden;
     grid-row-start: 2;
     grid-row-end: 3;
     animation: 1s ease-out 0s 1 slideInFromRight;
 }
-
-
 
 #leftSidebar {
     animation: 1s ease-out 0s 1 slideInFromTop;
@@ -45,6 +73,7 @@
 }
 
 .textBox {
+    padding:0 10 0 10;
     text-align: left;
     font-size: 14px;
     font-family: 'Arial', cursive;
