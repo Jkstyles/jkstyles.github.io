@@ -14,7 +14,7 @@
 }
 
 #wrapper {
-    width:100%;
+    width: 100%;
     height: 100%;
     position: absolute;
     z-index: 1;
@@ -67,14 +67,14 @@ input {
 }
 
 #typeWriter {
-    margin:10px;
+    margin: 10px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     line-height: 1.5;
     font-size: 20px
 }
 
 #leftSidebar {
-    min-width: 288px,1fr ;
+    min-width: 288px, 1fr;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #ffd000;
     background-color: #410268;
@@ -160,7 +160,7 @@ input {
 }
 
 img {
-    display:grid;
+    display: grid;
     margin-left: 82px;
     grid-column-start: 2;
     grid-column-end: 3;
@@ -183,7 +183,7 @@ img {
 }
 
 #footer {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-content: center;
     color: white;
@@ -194,6 +194,8 @@ img {
     grid-column-start: 1;
     grid-column-end: 4;
 }
-.fab{
-    margin-left:20px;
+
+.fab {
+    margin-left: 20px;
+    color: white;
 }
