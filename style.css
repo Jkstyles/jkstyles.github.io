@@ -183,6 +183,9 @@ img {
 }
 
 #footer {
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
     color: white;
     background-color: black;
     display: grid;
@@ -190,4 +193,7 @@ img {
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 4;
+}
+.fab{
+    margin-left:20px;
 }
